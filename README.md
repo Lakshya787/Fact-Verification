@@ -41,4 +41,6 @@ Make sure you have the following installed:
 | [Stellar Testnet Account](https://laboratory.stellar.org/#account-creator?network=test) | Wallet for test deployments |
 | [Freighter Wallet](https://freighter.app/) | Browser wallet for Stellar transactions |
 
+![WhatsApp Image 2025-11-02 at 17 29 16_4a497e58](https://github.com/user-attachments/assets/2d24b9f3-f475-47c5-8473-4e0783d98c90)
+
 
