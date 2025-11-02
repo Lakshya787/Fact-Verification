@@ -1,21 +1,44 @@
-# Soroban Project
+# 🧠 Fact Verification Smart Contract (Stellar + Rust)
 
-## Project Structure
+A **Soroban smart contract** that implements a decentralized **Fact Verification System** — allowing users to submit claims, vote on their authenticity, and retrieve verified results directly on the **Stellar blockchain**.
 
-This repository uses the recommended structure for a Soroban project:
-```text
-.
-├── contracts
-│   └── hello_world
-│       ├── src
-│       │   ├── lib.rs
-│       │   └── test.rs
-│       └── Cargo.toml
-├── Cargo.toml
-└── README.md
-```
+---
 
-- New Soroban contracts can be put in `contracts`, each in their own directory. There is already a `hello_world` contract in there to get you started.
-- If you initialized this project with any other example contracts via `--with-example`, those contracts will be in the `contracts` directory as well.
-- Contracts should have their own `Cargo.toml` files that rely on the top-level `Cargo.toml` workspace for their dependencies.
-- Frontend libraries can be added to the top-level directory as well. If you initialized this project with a frontend template via `--frontend-template` you will have those files already included.
+## 🚀 Overview
+
+This repository contains the **backend logic** (smart contract) for a Fact Verification DApp.
+
+The contract allows:
+- 📝 Users to **submit new facts**  
+- ✅ Other users to **vote** on facts (true/false)  
+- 📊 Transparent and **immutable record storage** on-chain  
+- 🔍 Retrieval of **all submitted facts** or a **specific fact**  
+
+All votes and submissions are **fully verified on-chain**, and double voting is automatically prevented.
+
+---
+
+## 🧱 Core Contract Functions
+
+| Function | Description |
+|-----------|-------------|
+| `submit_fact(env, creator, text)` | Submits a new fact and stores it on-chain |
+| `vote(env, voter, fact_id, is_true)` | Allows users to vote on a fact (true or false) |
+| `get_fact(env, fact_id)` | Fetches details of a single fact |
+| `get_all_facts(env)` | Returns a list of all stored facts |
+| `get_fact_count(env)` | Returns total number of submitted facts |
+
+---
+
+## ⚙️ Setup Requirements
+
+Make sure you have the following installed:
+
+| Tool | Purpose |
+|------|----------|
+| [Rust](https://www.rust-lang.org/tools/install) | Programming language for smart contract |
+| [Soroban CLI](https://soroban.stellar.org/docs/getting-started/setup) | Tool to build, deploy & interact with Stellar contracts |
+| [Stellar Testnet Account](https://laboratory.stellar.org/#account-creator?network=test) | Wallet for test deployments |
+| [Freighter Wallet](https://freighter.app/) | Browser wallet for Stellar transactions |
+
+
